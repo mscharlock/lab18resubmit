@@ -8,7 +8,7 @@ const mocks = module.exports = {};
 mocks.user = {};
 mocks.gallery = {};
 
-mocks.user.createOne = function {
+mocks.user.createOne = function() {
   this.result = {};
   result.password = faker.internet.password();
 
@@ -47,7 +47,7 @@ mocks.gallery.createOne = function() {
 
 mocks.gallery.removeAll = function() {
   return Promise.all([
-    Gallery.remove();
+    Gallery.remove()
   ])
 }
 mocks.user.removeAll = function() {
